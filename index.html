@@ -529,7 +529,7 @@
     #sky-menu-panel {
       display: none;
       position: fixed; inset: 0; z-index: 2000;
-      background: #0d1f0d;
+      background: #f4f6f0;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
@@ -539,73 +539,73 @@
       background: linear-gradient(135deg, #0f5207 0%, #1a7d0a 100%);
       display: flex; align-items: center; gap: 12px;
       padding: 14px 16px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.4);
+      box-shadow: 0 2px 12px rgba(0,0,0,.2);
     }
     .sky-menu-topbar button {
-      background: rgba(255,255,255,.15); border: none; color: #fff;
+      background: rgba(255,255,255,.2); border: none; color: #fff;
       font-size: 18px; border-radius: 8px; width: 36px; height: 36px;
       cursor: pointer; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
     }
-    .sky-menu-topbar h2 { margin: 0; color: #fff; font-size: 1.1rem; flex: 1; }
-    .sky-menu-topbar .sky-menu-subtitle { color: rgba(255,255,255,.75); font-size: .78rem; }
+    .sky-menu-topbar h2 { margin: 0; color: #fff; font-size: 1.05rem; flex: 1; }
+    .sky-menu-topbar .sky-menu-subtitle { color: rgba(255,255,255,.8); font-size: .76rem; }
     .sky-menu-body { padding: 20px 16px 40px; max-width: 640px; margin: 0 auto; }
     .sky-menu-hero {
-      background: linear-gradient(135deg, #1a3a1a 0%, #0d2a0d 100%);
-      border-radius: 16px; padding: 24px 20px; margin-bottom: 24px;
-      text-align: center; border: 1px solid rgba(61,191,26,.2);
+      background: linear-gradient(135deg, #1a7d0a 0%, #0f5207 100%);
+      border-radius: 16px; padding: 28px 20px; margin-bottom: 24px;
+      text-align: center;
     }
-    .sky-menu-hero h1 { color: #3dbf1a; margin: 0 0 4px; font-size: 1.4rem; }
-    .sky-menu-hero p { color: rgba(255,255,255,.6); margin: 0; font-size: .85rem; }
-    .sky-menu-section {
-      margin-bottom: 28px;
-    }
+    .sky-menu-hero h1 { color: #fff; margin: 0 0 4px; font-size: 1.4rem; }
+    .sky-menu-hero p { color: rgba(255,255,255,.75); margin: 0; font-size: .85rem; }
+    .sky-menu-section { margin-bottom: 24px; }
     .sky-menu-section-title {
-      display: flex; align-items: center; gap: 10px;
-      color: #3dbf1a; font-size: 1rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: .08em;
-      border-bottom: 1px solid rgba(61,191,26,.25);
-      padding-bottom: 8px; margin-bottom: 14px;
+      color: #0f5207; font-size: .9rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      border-bottom: 2px solid #1a7d0a;
+      padding-bottom: 6px; margin-bottom: 12px;
     }
     .sky-menu-section-note {
-      background: rgba(255,255,255,.05); border-radius: 8px;
+      background: #e8f0e4; border-radius: 8px;
       padding: 8px 12px; margin-bottom: 12px;
-      color: rgba(255,255,255,.55); font-size: .78rem; font-style: italic;
+      color: #4a6b3a; font-size: .78rem; font-style: italic;
     }
     .sky-menu-item {
-      background: rgba(255,255,255,.05);
-      border-radius: 12px; padding: 12px 14px; margin-bottom: 8px;
-      border-left: 3px solid rgba(61,191,26,.3);
+      background: #fff;
+      border-radius: 12px; margin-bottom: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,.08);
+      overflow: hidden;
     }
-    .sky-menu-item-name {
-      color: #fff; font-weight: 600; font-size: .92rem; margin-bottom: 3px;
+    .sky-menu-item-img {
+      width: 100%; height: 140px; object-fit: cover;
+      display: block; background: #e8f0e4;
     }
+    .sky-menu-item-body { padding: 12px 14px; }
+    .sky-menu-item-name { color: #1a1a1a; font-weight: 700; font-size: .95rem; margin-bottom: 3px; }
     .sky-menu-item-name .sky-badge {
-      display: inline-block; font-size: .65rem; font-weight: 700;
+      display: inline-block; font-size: .62rem; font-weight: 700;
       padding: 1px 6px; border-radius: 10px; margin-left: 6px; vertical-align: middle;
     }
-    .sky-badge-v { background: #2d6a2d; color: #8dda8d; }
-    .sky-badge-ve { background: #1a4d1a; color: #6dbf6d; }
-    .sky-menu-item-desc { color: rgba(255,255,255,.55); font-size: .8rem; line-height: 1.4; }
+    .sky-badge-v { background: #d4edcc; color: #1a7d0a; }
+    .sky-badge-ve { background: #c8e6bf; color: #0f5207; }
+    .sky-menu-item-desc { color: #555; font-size: .82rem; line-height: 1.45; }
     .sky-menu-item-note {
-      margin-top: 6px; padding: 6px 10px;
-      background: rgba(255,255,255,.04); border-radius: 6px;
-      color: rgba(255,255,255,.4); font-size: .75rem; font-style: italic; line-height: 1.4;
+      margin-top: 7px; padding: 7px 10px;
+      background: #f4f6f0; border-radius: 6px; border-left: 3px solid #3dbf1a;
+      color: #5a7a4a; font-size: .76rem; font-style: italic; line-height: 1.45;
     }
-    .sky-menu-item-price {
-      color: #f0c040; font-weight: 700; font-size: .85rem; margin-top: 4px;
-    }
+    .sky-menu-item-price { color: #1a7d0a; font-weight: 700; font-size: .88rem; margin-top: 5px; }
     .sky-menu-bubbles { display: flex; flex-direction: column; gap: 8px; }
     .sky-bubble {
-      background: rgba(255,255,255,.06); border-radius: 10px;
-      padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;
-      border: 1px solid rgba(240,192,64,.15);
+      background: #fff; border-radius: 10px;
+      padding: 11px 14px; display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,.08); border-left: 4px solid #c9a227;
     }
-    .sky-bubble-name { color: #f0c040; font-weight: 600; font-size: .85rem; }
-    .sky-bubble-price { color: #fff; font-size: .9rem; font-weight: 700; }
+    .sky-bubble-name { color: #333; font-weight: 600; font-size: .85rem; flex: 1; padding-right: 10px; }
+    .sky-bubble-price { color: #1a7d0a; font-size: .9rem; font-weight: 700; white-space: nowrap; }
     .sky-menu-footer {
-      margin-top: 24px; padding: 14px 16px;
-      background: rgba(255,255,255,.04); border-radius: 10px;
-      color: rgba(255,255,255,.4); font-size: .75rem; line-height: 1.6;
+      margin-top: 20px; padding: 14px 16px;
+      background: #e8f0e4; border-radius: 10px;
+      color: #4a6b3a; font-size: .76rem; line-height: 1.7;
     }
 
     /* ── Modal ── */
@@ -2376,7 +2376,7 @@
 <!-- ════════════════ JS ════════════════ -->
 <script>
   const PASSWORD = '*13579*Resistencia';
-  const unlocked = { lugares: false, comer: false, horarios: false };
+  const unlocked = { lugares: false, comer: false, horarios: false, transporte: false };
 
   // Auto-desbloqueo: desde el Sáb 6 Jun 2026 a las 17:00 hora España (UTC+2)
   const AUTO_UNLOCK = new Date('2026-06-05T15:00:00Z');
@@ -2518,224 +2518,90 @@
     <button onclick="closeSkyMenu()">←</button>
     <div>
       <h2>🥂 Darwin Brasserie</h2>
-      <div class="sky-menu-subtitle">Sky Garden · Piso 35 · Sábado 7 Jun, 21:00</div>
+      <div class="sky-menu-subtitle">Sky Garden · Piso 35 · Sábado 6 Jun, 21:00</div>
     </div>
   </div>
   <div class="sky-menu-body">
-
     <div class="sky-menu-hero">
       <h1>✨ Menú de Cena</h1>
       <p>Darwin Brasserie — Sky Garden, Londres</p>
     </div>
-
-    <!-- BURBUJAS -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🥂 Solo Añade Burbujas</div>
       <div class="sky-menu-bubbles">
-        <div class="sky-bubble">
-          <span class="sky-bubble-name">Rathfinny Classic Cuvée, Sussex 2019</span>
-          <span class="sky-bubble-price">£12/copa</span>
-        </div>
-        <div class="sky-bubble">
-          <span class="sky-bubble-name">Moët &amp; Chandon Brut Impérial, NV</span>
-          <span class="sky-bubble-price">£15/copa</span>
-        </div>
-        <div class="sky-bubble">
-          <span class="sky-bubble-name">Ruinart Brut, NV</span>
-          <span class="sky-bubble-price">£20/copa</span>
-        </div>
+        <div class="sky-bubble"><span class="sky-bubble-name">Rathfinny Classic Cuvée, Sussex, Inglaterra, 2019</span><span class="sky-bubble-price">£12/copa</span></div>
+        <div class="sky-bubble"><span class="sky-bubble-name">Moët &amp; Chandon Brut Impérial, NV</span><span class="sky-bubble-price">£15/copa</span></div>
+        <div class="sky-bubble"><span class="sky-bubble-name">Ruinart Brut, NV</span><span class="sky-bubble-price">£20/copa</span></div>
       </div>
     </div>
-
-    <!-- ENTRANTES -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🥗 Entrantes</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Sopa de Berros, Perejil y Apio <span class="sky-badge sky-badge-ve">VE</span></div>
-        <div class="sky-menu-item-desc">Crema de avena, picatostes de limón</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Terrina de Jamón</div>
-        <div class="sky-menu-item-desc">Piccalilli, pan de masa madre a la plancha</div>
-        <div class="sky-menu-item-note">Piccalilli: encurtido británico de coliflor, pepinillos, cebollitas y judías verdes con mostaza, vinagre y cúrcuma</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Soufflé de Queso <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-desc">Cheddar madurado y cebollino</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Espárragos Ingleses <span class="sky-badge sky-badge-ve">VE</span></div>
-        <div class="sky-menu-item-desc">Ruibarbo encurtido, cuajada, aceite de cebollino</div>
-        <div class="sky-menu-item-note">Ruibarbo: tallo de color rosa/rojo con sabor muy ácido, cocinado con azúcar</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Parfait de Champiñones <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-desc">Glaseado de oporto, brioche tostado</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Salmón Escocés Curado con Eneldo</div>
-        <div class="sky-menu-item-desc">Crema de limón y rábano picante, pan de centeno</div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🌿 Sopa de Berros, Perejil y Apio <span class="sky-badge sky-badge-ve">VE</span></div><div class="sky-menu-item-desc">Crema de avena, picatostes de limón</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🥩 Terrina de Jamón</div><div class="sky-menu-item-desc">Piccalilli, pan de masa madre a la plancha</div><div class="sky-menu-item-note">💡 Piccalilli: encurtido de vegetales tradicional de la cocina británica (coliflor, pepinillos, cebollitas y judías verdes) conservado en salsa a base de mostaza, vinagre, azúcar y cúrcuma</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🧀 Soufflé de Queso <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Cheddar madurado y cebollino</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🌱 Espárragos Ingleses <span class="sky-badge sky-badge-ve">VE</span></div><div class="sky-menu-item-desc">Ruibarbo encurtido, cuajada, aceite de cebollino</div><div class="sky-menu-item-note">💡 Ruibarbo: tallo parecido al apio, de color rosa, rojo o verde, con un sabor extremadamente ácido que se cocina y se combina con azúcar</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍄 Parfait de Champiñones <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Glaseado de oporto, brioche tostado</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🐟 Salmón Escocés Curado con Eneldo</div><div class="sky-menu-item-desc">Crema de limón y rábano picante, pan de centeno</div></div></div>
     </div>
-
-    <!-- PLATOS PRINCIPALES -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🍽️ Platos Principales</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Dorada</div>
-        <div class="sky-menu-item-desc">Brócoli morado germinado, salsa de mostaza y estragón</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Fish &amp; Chips</div>
-        <div class="sky-menu-item-desc">Guisantes machacados, salsa tártara</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Tarta de Primavera <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-desc">Espinacas a la crema, queso de cabra, espárragos ingleses, guisantes</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Col Hispi a la Barbacoa <span class="sky-badge sky-badge-ve">VE</span></div>
-        <div class="sky-menu-item-desc">Aliño diosa verde, seta ostra</div>
-        <div class="sky-menu-item-note">Col Hispi: col cónica, tierna y dulce, ideal para tostar al fuego · Aliño Diosa Verde: salsa cremosa de hierbas con base vegana</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Ensalada César de Pollo</div>
-        <div class="sky-menu-item-desc">Lechuga, anchoas, parmesano, bacon crujiente y picatostes</div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🐠 Dorada</div><div class="sky-menu-item-desc">Brócoli morado germinado, salsa de mostaza y estragón</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍟 Fish &amp; Chips</div><div class="sky-menu-item-desc">Guisantes machacados, salsa tártara</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🥧 Tarta de Primavera <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Espinacas a la crema, queso de cabra, espárragos ingleses, guisantes</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🥬 Col Hispi a la Barbacoa <span class="sky-badge sky-badge-ve">VE</span></div><div class="sky-menu-item-desc">Aliño diosa verde, seta ostra</div><div class="sky-menu-item-note">💡 Col Hispi: variedad de col con forma cónica, tierna y dulce, ideal para tostar al fuego<br>💡 Aliño Diosa Verde: salsa clásica cremosa de hierbas frescas (cebollino, estragón, perejil, ajo) con base vegana (aguacate, mayonesa vegana o yogur vegetal)<br>💡 Seta ostra (gírgolas): textura carnosa y sabor suave que absorbe muy bien los aliños</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🥗 Ensalada César de Pollo</div><div class="sky-menu-item-desc">Lechuga, anchoas, parmesano, bacon crujiente y picatostes</div></div></div>
     </div>
-
-    <!-- DE LA PARRILLA -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🥩 De la Parrilla</div>
       <div class="sky-menu-section-note">Servido con patatas fritas, berros y salsa de pimienta. Carne de granjas británicas sostenibles y de crianza libre.</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Solomillo 225 g</div>
-        <div class="sky-menu-item-price">+£5 suplemento</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Costilla de Res 340 g</div>
-        <div class="sky-menu-item-price">+£10 suplemento</div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🥩 Solomillo 225 g</div><div class="sky-menu-item-price">+£5 suplemento</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🦴 Costilla de Res 340 g</div><div class="sky-menu-item-price">+£10 suplemento</div></div></div>
     </div>
-
-    <!-- HAMBURGUESAS -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🍔 Hamburguesas</div>
       <div class="sky-menu-section-note">Bollo de brioche tostado, lechuga, tomate pera, pepinillo baby ahumado, salsa especial de la casa, patatas fritas.</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Hamburguesa con Queso Darwin</div>
-        <div class="sky-menu-item-desc">Añadir bacon +£2,50</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Hamburguesa de Pollo a la Plancha</div>
-        <div class="sky-menu-item-desc">Añadir bacon +£2,50</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Hamburguesa de Garbanzo y Nuez <span class="sky-badge sky-badge-ve">VE</span></div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍔 Hamburguesa con Queso Darwin</div><div class="sky-menu-item-desc">Añadir bacon +£2,50</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍗 Hamburguesa de Pollo a la Plancha</div><div class="sky-menu-item-desc">Añadir bacon +£2,50</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🌿 Hamburguesa de Garbanzo y Nuez <span class="sky-badge sky-badge-ve">VE</span></div></div></div>
     </div>
-
-    <!-- TARTAS Y EMPANADAS -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🥧 Tartas y Empanadas</div>
       <div class="sky-menu-section-note">Servidas con puré de patatas y col Savoy con mantequilla.</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Ternera Estofada y Stout de Leche</div>
-        <div class="sky-menu-item-note">Milk Stout: cerveza negra dulce, cremosa y de cuerpo pleno</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Pollo, Jamón y Puerro</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Verduras Asadas y Queso Azul de Yorkshire <span class="sky-badge sky-badge-v">V</span></div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🥘 Ternera Estofada y Stout de Leche</div><div class="sky-menu-item-note">💡 Stout de Leche (Milk Stout): cerveza negra dulce, cremosa y de cuerpo pleno</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍖 Pollo, Jamón y Puerro</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🧀 Verduras Asadas y Queso Azul de Yorkshire <span class="sky-badge sky-badge-v">V</span></div></div></div>
     </div>
-
-    <!-- GUARNICIONES -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🥗 Guarniciones</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Patatas fritas triple cocción <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-price">£7,00</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Patatas fritas de boniato <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-price">£7,25</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Patatas fritas con trufa y parmesano</div>
-        <div class="sky-menu-item-price">£9,95</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Patatas nuevas Jersey Royal <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-price">£7,00</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Espinacas a la crema <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-price">£7,00</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Puré de patatas <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-price">£7,00</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Ensalada de la casa <span class="sky-badge sky-badge-ve">VE</span></div>
-        <div class="sky-menu-item-price">£7,00</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Espárragos y habas con mantequilla <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-price">£7,50</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Lechuga Gem con aderezo de nata</div>
-        <div class="sky-menu-item-price">£7,00</div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Patatas fritas triple cocción <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-price">£7,00</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Patatas fritas de boniato <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-price">£7,25</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Patatas fritas con trufa y parmesano</div><div class="sky-menu-item-price">£9,95</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Patatas nuevas Jersey Royal <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-price">£7,00</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Espinacas a la crema <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-price">£7,00</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Puré de patatas <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-price">£7,00</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Ensalada de la casa <span class="sky-badge sky-badge-ve">VE</span></div><div class="sky-menu-item-price">£7,00</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Espárragos y habas con mantequilla <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-price">£7,50</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">Lechuga Gem con aderezo de nata</div><div class="sky-menu-item-price">£7,00</div></div></div>
     </div>
-
-    <!-- POSTRES -->
     <div class="sky-menu-section">
       <div class="sky-menu-section-title">🍮 Postres</div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Rocher de Avellanas <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-desc">Praliné, crema Chantilly</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Pudding de Toffee <span class="sky-badge sky-badge-ve">VE</span></div>
-        <div class="sky-menu-item-desc">Caramelo salado, helado de vainilla</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Tarta de Limón Caramelizada <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-desc">Frambuesas, crème fraîche</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Frutas Tropicales Maceradas <span class="sky-badge sky-badge-ve">VE</span></div>
-        <div class="sky-menu-item-desc">Yogur batido, crumble de coco</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Mousse de Chocolate Blanco</div>
-        <div class="sky-menu-item-desc">Ruibarbo pochado, merengue</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Helados y Sorbetes Judes <span class="sky-badge sky-badge-ve">VE</span><span class="sky-badge sky-badge-v" style="margin-left:3px">V</span></div>
-        <div class="sky-menu-item-desc">3 bolas a elegir: nata clotted de vainilla, fresas con nata, brownie de galleta, frambuesa, limón siciliano, manzana Granny Smith</div>
-      </div>
-      <div class="sky-menu-item">
-        <div class="sky-menu-item-name">Selección de Quesos Británicos e Irlandeses <span class="sky-badge sky-badge-v">V</span></div>
-        <div class="sky-menu-item-desc">Cashel Blue, Golden Cenarth, Mull of Kintyre, Golden Cross</div>
-        <div class="sky-menu-item-price">+£7,50 suplemento</div>
-      </div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍫 Rocher de Avellanas <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Praliné, crema Chantilly</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍮 Pudding de Toffee <span class="sky-badge sky-badge-ve">VE</span></div><div class="sky-menu-item-desc">Caramelo salado, helado de vainilla</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍋 Tarta de Limón Caramelizada <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Frambuesas, crème fraîche</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍍 Frutas Tropicales Maceradas <span class="sky-badge sky-badge-ve">VE</span></div><div class="sky-menu-item-desc">Yogur batido, crumble de coco</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍨 Mousse de Chocolate Blanco</div><div class="sky-menu-item-desc">Ruibarbo pochado, merengue</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🍦 Helados y Sorbetes Judes <span class="sky-badge sky-badge-ve">VE</span> <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Selecciona 3 bolas: nata clotted de vainilla, fresas con nata, brownie de galleta, frambuesa, limón siciliano, manzana Granny Smith</div></div></div>
+      <div class="sky-menu-item"><div class="sky-menu-item-body"><div class="sky-menu-item-name">🧀 Selección de Quesos Británicos e Irlandeses <span class="sky-badge sky-badge-v">V</span></div><div class="sky-menu-item-desc">Cashel Blue, Golden Cenarth, Mull of Kintyre, Golden Cross</div><div class="sky-menu-item-price">+£7,50 suplemento</div></div></div>
     </div>
-
     <div class="sky-menu-footer">
-      <strong style="color:rgba(255,255,255,.6)">Notas:</strong><br>
-      V = Vegetariano &nbsp;·&nbsp; VE = Vegano<br>
+      <strong>Notas:</strong><br>
+      V = Vegetariano &amp;nbsp;·&amp;nbsp; VE = Vegano<br>
       Se añadirá un cargo discrecional por servicio del 13,5% a su cuenta.<br>
       Todos los precios incluyen IVA.<br>
-      Para alergias e intolerancias alimentarias, consulte con el personal.
+      Para alergias e intolerancias alimentarias, consulte con el personal.<br>
+      Los alérgenos están presentes en nuestra cocina y no podemos garantizar que los platos estén 100% libres de alérgenos.
     </div>
-
   </div>
 </div>
-
 </body>
 </html>
